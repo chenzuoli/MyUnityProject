@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Move : MonoBehaviour
 {
     public Rigidbody rb;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -25,5 +27,14 @@ public class Move : MonoBehaviour
 
         float v = Input.GetAxis("Vertical"); // 垂直 ws
         rb.AddForce(new Vector3(h, 0, v));
+
+        ArrayList abc = new ArrayList();
+
+
+
+
+        //控制相机视角
+        //transform.Rotate(-Input.GetAxis("Horizontal") * 2, 0, 0);
+        //transform.Rotate(0, Input.GetAxis("Vertical") * 2, 0);
     }
 }
